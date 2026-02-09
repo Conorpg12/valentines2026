@@ -25,12 +25,13 @@
         .container {
             text-align: center;
             background: white;
-            padding: 50px 40px;
+            padding: 40px 40px;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             max-width: 600px;
             width: 100%;
-            min-height: 400px;
+            max-height: 90vh;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -181,11 +182,14 @@
         }
 
         @media (max-width: 600px) {
-            .container { padding: 40px 30px; }
-            h1 { font-size: 1.8em; }
-            .emoji { font-size: 4em; }
-            .reason-text { font-size: 1.2em; }
-            button { padding: 12px 40px; font-size: 1em; }
+            .container { padding: 20px 15px; }
+            h1 { font-size: 1.5em; margin-bottom: 15px; }
+            .emoji { font-size: 2.5em; margin: 8px 0; }
+            .reason-text { font-size: 1em; margin: 15px 0; line-height: 1.4; }
+            button { padding: 10px 35px; font-size: 0.95em; margin-top: 15px; }
+            .intro-photo { max-width: 160px; margin: 10px 0; }
+            .celebration-photo { max-width: 200px; }
+            .counter { font-size: 0.85em; margin-bottom: 10px; }
         }
     </style>
 </head>
@@ -198,7 +202,6 @@
             <!-- Add your first photo here -->
             <img src="photo1.jpg" alt="Us" class="intro-photo">
             
-            <div class="emoji">📝</div>
             <p class="reason-text">I made you a list of reasons why you should be my Valentine...</p>
             <button class="next-btn" onclick="nextPage()">Let's See Them ➜</button>
         </div>
